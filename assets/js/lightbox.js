@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Kareem Zaghloul — Engineering Lightbox Module
-   Accessible dialog, zoom/pan, keyboard & touch swipe, image preloading
+   Kareem Zaghloul — Minimal Lightbox Viewer
+   Dialog modal, 2x zoom/pan, keyboard & touch swipe, neighbor preload
    ========================================================================== */
 (function () {
   'use strict';
@@ -11,7 +11,6 @@
 
   if (triggers.length === 0) return;
 
-  // Build dialog once
   var dialog = document.createElement('div');
   dialog.className = 'lightbox';
   dialog.setAttribute('role', 'dialog');
@@ -21,22 +20,22 @@
 
   dialog.innerHTML = [
     '<div class="lightbox-bar">',
-    '  <span class="lightbox-counter" id="lightbox-counter">01 / 01</span>',
+    '  <span class="lightbox-counter" id="lightbox-counter">1 / 1</span>',
     '  <div class="lightbox-controls">',
     '    <button type="button" class="lightbox-btn" id="lightbox-zoom-btn" aria-pressed="false">Zoom 2x</button>',
-    '    <button type="button" class="lightbox-btn" id="lightbox-close-btn" aria-label="Close viewer">Close [Esc]</button>',
+    '    <button type="button" class="lightbox-btn" id="lightbox-close-btn" aria-label="Close viewer">Close</button>',
     '  </div>',
     '</div>',
     '<div class="lightbox-stage">',
-    '  <button type="button" class="lightbox-nav lightbox-nav--prev" id="lightbox-prev-btn" aria-label="Previous image">&larr;</button>',
+    '  <button type="button" class="lightbox-nav lightbox-nav--prev" id="lightbox-prev-btn" aria-label="Previous figure">&larr;</button>',
     '  <div class="lightbox-img-wrap" id="lightbox-img-wrap">',
     '    <img class="lightbox-img" id="lightbox-img" src="" alt="">',
     '  </div>',
-    '  <button type="button" class="lightbox-nav lightbox-nav--next" id="lightbox-next-btn" aria-label="Next image">&rarr;</button>',
+    '  <button type="button" class="lightbox-nav lightbox-nav--next" id="lightbox-next-btn" aria-label="Next figure">&rarr;</button>',
     '</div>',
     '<div class="lightbox-caption-bar">',
     '  <p class="lightbox-caption" id="lightbox-caption"></p>',
-    '  <span class="lightbox-hint">Click image to toggle 2x zoom &middot; Arrow keys to navigate &middot; Esc to close</span>',
+    '  <span class="lightbox-hint">Click image to zoom &middot; Arrow keys to step &middot; Esc to close</span>',
     '</div>'
   ].join('');
 
@@ -114,9 +113,7 @@
     imgEl.src = item.src;
     imgEl.alt = item.alt;
     captionEl.textContent = item.caption || item.alt;
-    var cur = String(currentIndex + 1).padStart(2, '0');
-    var tot = String(currentGroup.length).padStart(2, '0');
-    counterEl.textContent = cur + ' / ' + tot;
+    counterEl.textContent = String(currentIndex + 1) + ' / ' + String(currentGroup.length);
 
     var single = currentGroup.length <= 1;
     prevBtn.hidden = single;
@@ -179,14 +176,12 @@
   nextBtn.addEventListener('click', function () { step(1); });
   zoomBtn.addEventListener('click', toggleZoom);
 
-  // Backdrop click to close
   dialog.addEventListener('click', function (e) {
     if (e.target === dialog || e.target.classList.contains('lightbox-stage')) {
       closeLightbox();
     }
   });
 
-  // Pointer drag pan when zoomed, click to toggle zoom
   imgWrap.addEventListener('pointerdown', function (e) {
     movedDuringDrag = false;
     if (!isZoomed) return;
@@ -225,7 +220,6 @@
     toggleZoom();
   });
 
-  // Touch swipe navigation on unzoomed view
   var stage = dialog.querySelector('.lightbox-stage');
   stage.addEventListener(
     'touchstart',
@@ -251,7 +245,6 @@
     { passive: true }
   );
 
-  // Keyboard & Focus Trap
   document.addEventListener('keydown', function (e) {
     if (!dialog.classList.contains('is-open')) return;
 

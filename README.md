@@ -1,62 +1,46 @@
 # Kareem Zaghloul — Mechanical CAD Portfolio (`kareemzaghloul.github.io`)
 
-100% static HTML, CSS, and JavaScript engineering portfolio ready for GitHub Pages (zero build tools, zero npm, zero backend).
+Minimal, light-themed static portfolio built with pure HTML, CSS, and JavaScript for GitHub Pages (no build tools, no npm, no backend).
 
 ---
 
-## Deploying to GitHub Pages (Web Upload — 5 Steps)
+## Deploying to GitHub Pages (Important: Clean Up Old Files First)
 
-> طريقة الرفع عبر المتصفح (GitHub Web):
+If your repository currently holds files from an earlier version (`assets/`, `projects/`, `site.webmanifest`, etc.), **remove the old files first** so no unused files remain on GitHub.
 
-1. Open your repository: `https://github.com/kareemzaghloul/kareemzaghloul.github.io` and click **Add file → Upload files**.
-2. Extract `kareemzaghloul.github.io.zip`, select **all extracted files and folders** (`index.html`, `.nojekyll`, `404.html`, `assets/`, `projects/`, etc.), and drag them into the upload area (this replaces your old `index.html`).
-3. Scroll down, enter a commit message (e.g., `Deploy engineering portfolio`), and click **Commit changes** to `main`.
-4. Go to **Settings → Pages** and confirm **Source: Deploy from a branch**, **Branch: `main`**, folder **`/ (root)`**.
-5. Wait **1–3 minutes**, then open `https://kareemzaghloul.github.io` and hard-refresh (`Ctrl + Shift + R`).
+### Option A — GitHub Web Interface
 
-### Git CLI Alternative
+1. Open `https://github.com/kareemzaghloul/kareemzaghloul.github.io` and delete any old folders/files (`assets/`, `projects/`, `404.html`, `README.md`, `robots.txt`, `sitemap.xml`, `site.webmanifest`) if present.
+2. Extract `kareemzaghloul.github.io.zip` locally.
+3. Click **Add file → Upload files**, select **all extracted files and folders** (`index.html`, `.nojekyll`, `404.html`, `robots.txt`, `sitemap.xml`, `README.md`, `assets/`, `projects/`), and drag them into the upload box.
+4. Commit the changes directly to `main`.
+5. Go to **Settings → Pages**, set **Source: Deploy from a branch**, **Branch: `main`**, folder **`/ (root)`**, wait 1–3 minutes, and hard-refresh `https://kareemzaghloul.github.io` (`Ctrl + Shift + R`).
+
+### Option B — Git CLI
 
 ```bash
 git clone https://github.com/kareemzaghloul/kareemzaghloul.github.io.git
 cd kareemzaghloul.github.io
-# Copy all extracted contents into this folder (overwriting index.html)
+git rm -r .
+# Copy all extracted contents from kareemzaghloul.github.io.zip into this folder
 git add -A
-git commit -m "Deploy updated mechanical CAD portfolio"
+git commit -m "Deploy redesigned mechanical CAD portfolio"
 git push origin main
 ```
 
----
-
-## Replacing Placeholders with Your Real Files
-
-All placeholder images are blueprint `.svg` files with the exact recommended dimensions printed inside them. To replace any image:
-1. Export your real render or drawing from SOLIDWORKS as `.jpg` or `.webp` (or `.png` for crisp 2D drawings).
-2. Compress images under **400 KB** using [squoosh.app](https://squoosh.app) so pages load fast.
-3. Put the file in the matching folder below and update the `.svg` extension to `.jpg` / `.webp` / `.png` in that project's HTML file (`src` and `data-src` for gallery images).
-4. For PDFs, keep the exact filename so all links work immediately without HTML edits.
-
-### Placeholder Replacement Table
-
-| File Path | What to Export | Recommended Size / Format |
-|---|---|---|
-| `assets/docs/Kareem-Zaghloul-CV.pdf` | Your up-to-date CV | PDF (same filename) |
-| `assets/docs/Kareem-Zaghloul-Portfolio.pdf` | Compiled PDF portfolio packet | PDF (same filename) |
-| `assets/projects/proximity-sensor-bracket/cover.svg` | Project 01 hero assembly render | `2400×1500` JPG/WebP (< 400 KB) |
-| `assets/projects/proximity-sensor-bracket/01-assembly-iso.svg` | Complete SOLIDWORKS 3D isometric assembly | `2400×1500` JPG/WebP (< 400 KB) |
-| `assets/projects/proximity-sensor-bracket/02-exploded-view.svg` | Exploded assembly view | `2400×1500` JPG/WebP (< 400 KB) |
-| `assets/projects/proximity-sensor-bracket/03-adjustment-range.svg` | 25 mm linear slot adjustment view | `2400×1500` JPG/WebP (< 400 KB) |
-| `assets/projects/proximity-sensor-bracket/04-interference-check.svg` | SOLIDWORKS Interference Detection screenshot | `2400×1500` JPG/WebP (< 400 KB) |
-| `assets/projects/proximity-sensor-bracket/05-sensor-detail.svg` | M12 proximity sensor mounting detail | `2400×1500` JPG/WebP (< 400 KB) |
-| `assets/projects/proximity-sensor-bracket/drawing-base-plate.svg` | Base Plate 2D drawing sheet preview | `1600×1131` PNG/JPG (< 400 KB) |
-| `assets/projects/proximity-sensor-bracket/drawing-l-bracket.svg` | L-Bracket 2D drawing sheet preview | `1600×1131` PNG/JPG (< 400 KB) |
-| `assets/projects/proximity-sensor-bracket/drawing-base-plate.pdf` | Exported SOLIDWORKS Base Plate drawing | PDF (same filename) |
-| `assets/projects/proximity-sensor-bracket/drawing-l-bracket.pdf` | Exported SOLIDWORKS L-Bracket drawing | PDF (same filename) |
-| `assets/projects/<slug>/cover.svg`, `01-concept.svg`, `02-assembly.svg` | Future project renders for Projects 02–07 | `2400×1500` JPG/WebP (< 400 KB) |
+> طريقة النشر السريعة: احذف المجلدات القديمة من المستودع أولاً (`assets/`، `projects/`، `site.webmanifest`)، ثم فك ضغط ملف الـ ZIP وارفع جميع الملفات والمجلدات الجديدة إلى فرع `main` وانتظر 1–3 دقائق.
 
 ---
 
-## Enabling Your Email Card (Optional)
+## Adding Future Projects (Projects 02–07)
 
-In `index.html` inside the `#contact` section, look for the `<!-- EMAIL CARD TEMPLATE ... -->` HTML comment block. Remove the `<!--` and `-->` comment markers and replace `YOUR_EMAIL@domain.com` with your actual email address.
+1. Export clean SOLIDWORKS renders (recommended widths `2400px` and `1200px`, compressed under `450 KB` as progressive JPEG).
+2. Place them inside `assets/projects/<project-slug>/`.
+3. Duplicate `projects/proximity-sensor-bracket.html` as `projects/<project-slug>.html`, update the copy, tables, and image paths.
+4. In `index.html`, move the project out of the **In development** `<ol>` list and add a featured link block under **Selected Work**.
 
-When you finish Projects 02–07, update their status badge (`status-badge--completed`) and `data-status="completed"` in `index.html` and the corresponding file in `projects/`.
+---
+
+## Enabling Your Email Address (Optional)
+
+In `index.html` inside the `#contact` section, find the commented-out `<!-- <a href="mailto:YOUR_EMAIL@domain.com">...</a> -->` line, remove the HTML comment tags, and replace `YOUR_EMAIL@domain.com` with your actual email address.
