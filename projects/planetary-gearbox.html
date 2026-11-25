@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 06: Advanced Planetary Gearbox | Kareem Zaghloul</title>
+  <meta name="description" content="Planned planetary gearbox design covering reduction-ratio and torque calculations, bearing selection, and mechanical component analysis.">
+  <meta name="theme-color" content="#070B14">
+  <link rel="canonical" href="https://kareemzaghloul.github.io/projects/planetary-gearbox.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Project 06: Advanced Planetary Gearbox | Kareem Zaghloul">
+  <meta property="og:description" content="Planned planetary gearbox design covering reduction-ratio and torque calculations, bearing selection, and mechanical component analysis.">
+  <meta property="og:url" content="https://kareemzaghloul.github.io/projects/planetary-gearbox.html">
+  <meta property="og:image" content="https://kareemzaghloul.github.io/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Advanced Planetary Gearbox",
+    "author": {
+      "@type": "Person",
+      "name": "Kareem Zaghloul",
+      "url": "https://kareemzaghloul.github.io/"
+    },
+    "url": "https://kareemzaghloul.github.io/projects/planetary-gearbox.html",
+    "description": "Planned planetary gearbox design covering reduction-ratio and torque calculations, bearing selection, and mechanical component analysis."
+  }
+  </script>
+</head>
+<body id="top">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-mark" aria-label="Kareem Zaghloul Home">
+        <span class="brand-badge" aria-hidden="true">KZ</span>
+        <span>KAREEM ZAGHLOUL</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="../index.html#about" class="nav-link">About</a></li>
+          <li><a href="../index.html#expertise" class="nav-link">Expertise</a></li>
+          <li><a href="../index.html#projects" class="nav-link" aria-current="true">Projects</a></li>
+          <li><a href="../index.html#process" class="nav-link">Process</a></li>
+          <li><a href="../index.html#documents" class="nav-link">Documents</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://www.linkedin.com/in/kareem-zaghloul-7426b5449/" class="icon-link" target="_blank" rel="noopener noreferrer" aria-label="Kareem Zaghloul on LinkedIn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+          <span class="nav-toggle-lines" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true" aria-label="Mobile navigation">
+    <ul class="mobile-menu-list">
+      <li><a href="../index.html#about" class="mobile-menu-link"><span class="mono">01</span><span>About</span></a></li>
+      <li><a href="../index.html#expertise" class="mobile-menu-link"><span class="mono">02</span><span>Expertise</span></a></li>
+      <li><a href="../index.html#projects" class="mobile-menu-link"><span class="mono">03</span><span>Projects</span></a></li>
+      <li><a href="../index.html#process" class="mobile-menu-link"><span class="mono">04</span><span>Process</span></a></li>
+      <li><a href="../index.html#documents" class="mobile-menu-link"><span class="mono">05</span><span>Documents</span></a></li>
+      <li><a href="../index.html#contact" class="mobile-menu-link"><span class="mono">06</span><span>Contact</span></a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+      <a href="https://www.linkedin.com/in/kareem-zaghloul-7426b5449/" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+      <a href="https://github.com/kareemzaghloul" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="project-hero blueprint-bg">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="../index.html#projects">Projects</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Advanced Planetary Gearbox</span>
+        </nav>
+
+        <div class="project-title-row">
+          <div>
+            <div class="eyebrow" style="margin-bottom: 12px;">PROJECT 06 / POWER TRANSMISSION</div>
+            <h1 class="project-h1">Advanced Planetary Gearbox</h1>
+          </div>
+          <span class="status-badge status-badge--planned">Planned</span>
+        </div>
+
+        <div class="meta-strip">
+          <div class="meta-item">
+            <div class="meta-item-key">Software</div>
+            <div class="meta-item-val">SOLIDWORKS (Planned)</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-item-key">Type</div>
+            <div class="meta-item-val">Gear Train &amp; Assembly</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-item-key">Deliverables</div>
+            <div class="meta-item-val">To be published</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-item-key">Status</div>
+            <div class="meta-item-val">Planned</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-item-key">Level</div>
+            <div class="meta-item-val">Very Advanced</div>
+          </div>
+        </div>
+
+        <figure class="case-hero-figure">
+          <img src="../assets/projects/planetary-gearbox/cover.svg" width="1600" height="1000" alt="Advanced Planetary Gearbox — planned project cover placeholder">
+          <figcaption class="case-hero-caption">
+            <span>FIG. 00 &mdash; Advanced Planetary Gearbox (Cover Placeholder)</span>
+            <span>STATUS: PLANNED</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="container">
+        <div class="callout callout--warn" role="note">
+          <div class="callout-title">Case Study In Development</div>
+          <p>
+            Case study in development &mdash; content, images and drawings will be published when the project is complete.
+          </p>
+        </div>
+
+        <div class="case-two-col">
+          <div class="case-copy">
+            <h2>Planned Objective</h2>
+            <p>This planned advanced project will design a multi-component planetary gearbox assembly from kinematic sizing through detailed housing and shaft integration.</p>
+            <p>Planned tasks include reduction-ratio and torque calculations, rolling-element bearing selection, and analysis of the primary mechanical components.</p>
+          </div>
+
+          <aside class="spec-sheet" aria-label="Planned technical specifications">
+            <div class="spec-sheet-head">
+              <span>SPECIFICATIONS</span>
+              <span>PRJ-06 // DRAFT</span>
+            </div>
+            <dl class="spec-dl">
+              <div class="spec-row">
+                <dt>Primary CAD</dt>
+                <dd>SOLIDWORKS (planned)</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Dimensions / Envelope</dt>
+                <dd>To be defined</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Materials</dt>
+                <dd>To be defined</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Hardware / Standards</dt>
+                <dd>To be defined</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Technical Drawings</dt>
+                <dd>To be defined</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Verification</dt>
+                <dd>To be defined</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="container">
+        <h2 class="case-section-heading">Planned Scope &amp; Deliverables</h2>
+        <ul class="planned-checklist">
+          <li class="planned-check-item">
+            <span class="planned-check-box" aria-hidden="true"></span>
+            <span>Sun, planet &amp; ring gear geometry modeling</span>
+          </li>
+          <li class="planned-check-item">
+            <span class="planned-check-box" aria-hidden="true"></span>
+            <span>Reduction-ratio &amp; torque calculations</span>
+          </li>
+          <li class="planned-check-item">
+            <span class="planned-check-box" aria-hidden="true"></span>
+            <span>Bearing selection &amp; shaft fit layout</span>
+          </li>
+          <li class="planned-check-item">
+            <span class="planned-check-box" aria-hidden="true"></span>
+            <span>Mechanical component analysis &amp; assembly drawings</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="container">
+        <h2 class="case-section-heading">Placeholder Gallery</h2>
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <button type="button" class="gallery-trigger" data-lightbox="project-06" data-src="../assets/projects/planetary-gearbox/01-concept.svg" data-alt="Advanced Planetary Gearbox concept layout placeholder" data-caption="FIG. 01 — Advanced Planetary Gearbox: Concept &amp; initial layout placeholder">
+              <div class="gallery-thumb">
+                <img src="../assets/projects/planetary-gearbox/01-concept.svg" width="1600" height="1000" loading="lazy" decoding="async" alt="Advanced Planetary Gearbox concept layout placeholder">
+                <span class="gallery-zoom-pill">Inspect</span>
+              </div>
+              <figcaption class="gallery-caption">FIG. 01 &mdash; Concept &amp; initial layout (Placeholder)</figcaption>
+            </button>
+          </figure>
+
+          <figure class="gallery-item">
+            <button type="button" class="gallery-trigger" data-lightbox="project-06" data-src="../assets/projects/planetary-gearbox/02-assembly.svg" data-alt="Advanced Planetary Gearbox CAD assembly placeholder" data-caption="FIG. 02 — Advanced Planetary Gearbox: CAD assembly placeholder">
+              <div class="gallery-thumb">
+                <img src="../assets/projects/planetary-gearbox/02-assembly.svg" width="1600" height="1000" loading="lazy" decoding="async" alt="Advanced Planetary Gearbox CAD assembly placeholder">
+                <span class="gallery-zoom-pill">Inspect</span>
+              </div>
+              <figcaption class="gallery-caption">FIG. 02 &mdash; CAD assembly view (Placeholder)</figcaption>
+            </button>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="container">
+        <nav class="project-pager" aria-label="Project navigation">
+          <a href="automotive-pedal-mechanism.html" class="cad-card pager-card">
+            <span class="pager-dir">&larr; Previous Project (05)</span>
+            <span class="pager-title">Automotive Pedal Mechanism</span>
+          </a>
+
+          <a href="centrifugal-pump-study.html" class="cad-card pager-card pager-card--next">
+            <span class="pager-dir">Next Project (07) &rarr;</span>
+            <span class="pager-title">Centrifugal Pump Engineering Study</span>
+          </a>
+        </nav>
+
+        <div style="margin-top: 24px;">
+          <a href="../index.html#projects" class="btn btn-ghost btn-sm">&larr; Back to all projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-cell-label">ENGINEER</div>
+          <div class="footer-cell-val">Kareem Zaghloul</div>
+        </div>
+        <div>
+          <div class="footer-cell-label">DISCIPLINE</div>
+          <div class="footer-cell-val">Mechanical CAD &amp; CAM Student</div>
+        </div>
+        <div>
+          <div class="footer-cell-label">LINKS</div>
+          <div class="footer-links">
+            <a href="https://www.linkedin.com/in/kareem-zaghloul-7426b5449/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/kareemzaghloul" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="../index.html#projects">All Projects</a>
+          </div>
+        </div>
+        <div>
+          <a href="#top" class="btn btn-ghost btn-sm">Back to top &uarr;</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span id="footer-year">2026</span> Kareem Zaghloul &middot; Mechanical CAD Portfolio</span>
+        <span>Al-Balqa Applied University &middot; Jordan</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/lightbox.js" defer></script>
+</body>
+</html>

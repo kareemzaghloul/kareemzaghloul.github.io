@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 01: Adjustable Proximity Sensor Mounting Bracket | Kareem Zaghloul</title>
+  <meta name="description" content="SOLIDWORKS mechanical CAD case study: Adjustable Proximity Sensor Mounting Bracket featuring a machined aluminum base plate, L-shaped bracket, 25 mm adjustment, M12 sensor, 2 technical drawings, and digital interference checks.">
+  <meta name="theme-color" content="#070B14">
+  <link rel="canonical" href="https://kareemzaghloul.github.io/projects/proximity-sensor-bracket.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Project 01: Adjustable Proximity Sensor Mounting Bracket | Kareem Zaghloul">
+  <meta property="og:description" content="SOLIDWORKS assembly, 25 mm linear adjustment, 2 technical part drawings, and digital interference checks.">
+  <meta property="og:url" content="https://kareemzaghloul.github.io/projects/proximity-sensor-bracket.html">
+  <meta property="og:image" content="https://kareemzaghloul.github.io/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Adjustable Proximity Sensor Mounting Bracket",
+    "author": {
+      "@type": "Person",
+      "name": "Kareem Zaghloul",
+      "url": "https://kareemzaghloul.github.io/"
+    },
+    "url": "https://kareemzaghloul.github.io/projects/proximity-sensor-bracket.html",
+    "description": "SOLIDWORKS assembly with machined aluminum base plate, adjustable L-shaped bracket, industrial M12 proximity sensor, 25 mm linear adjustment, exploded view, 2 technical drawings, and digital interference checks."
+  }
+  </script>
+</head>
+<body id="top">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-mark" aria-label="Kareem Zaghloul Home">
+        <span class="brand-badge" aria-hidden="true">KZ</span>
+        <span>KAREEM ZAGHLOUL</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="../index.html#about" class="nav-link">About</a></li>
+          <li><a href="../index.html#expertise" class="nav-link">Expertise</a></li>
+          <li><a href="../index.html#projects" class="nav-link" aria-current="true">Projects</a></li>
+          <li><a href="../index.html#process" class="nav-link">Process</a></li>
+          <li><a href="../index.html#documents" class="nav-link">Documents</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://www.linkedin.com/in/kareem-zaghloul-7426b5449/" class="icon-link" target="_blank" rel="noopener noreferrer" aria-label="Kareem Zaghloul on LinkedIn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+          <span class="nav-toggle-lines" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true" aria-label="Mobile navigation">
+    <ul class="mobile-menu-list">
+      <li><a href="../index.html#about" class="mobile-menu-link"><span class="mono">01</span><span>About</span></a></li>
+      <li><a href="../index.html#expertise" class="mobile-menu-link"><span class="mono">02</span><span>Expertise</span></a></li>
+      <li><a href="../index.html#projects" class="mobile-menu-link"><span class="mono">03</span><span>Projects</span></a></li>
+      <li><a href="../index.html#process" class="mobile-menu-link"><span class="mono">04</span><span>Process</span></a></li>
+      <li><a href="../index.html#documents" class="mobile-menu-link"><span class="mono">05</span><span>Documents</span></a></li>
+      <li><a href="../index.html#contact" class="mobile-menu-link"><span class="mono">06</span><span>Contact</span></a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+      <a href="https://www.linkedin.com/in/kareem-zaghloul-7426b5449/" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+      <a href="https://github.com/kareemzaghloul" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- 1–4. Breadcrumb, Header, Meta Strip, Hero Cover -->
+    <section class="project-hero blueprint-bg">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="../index.html#projects">Projects</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Adjustable Proximity Sensor Mounting Bracket</span>
+        </nav>
+
+        <div class="project-title-row">
+          <div>
+            <div class="eyebrow" style="margin-bottom: 12px;">PROJECT 01 / MECHANICAL DESIGN</div>
+            <h1 class="project-h1">Adjustable Proximity Sensor Mounting Bracket</h1>
+          </div>
+          <span class="status-badge status-badge--completed">Completed</span>
+        </div>
+
+        <div class="meta-strip">
+          <div class="meta-item">
+            <div class="meta-item-key">Software</div>
+            <div class="meta-item-val">SOLIDWORKS</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-item-key">Type</div>
+            <div class="meta-item-val">Mechanical Assembly</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-item-key">Deliverables</div>
+            <div class="meta-item-val">3D Assembly, Exploded View, 2 Drawings</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-item-key">Status</div>
+            <div class="meta-item-val">Completed (Digital)</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-item-key">Level</div>
+            <div class="meta-item-val">Basic &ndash; Intermediate</div>
+          </div>
+        </div>
+
+        <figure class="case-hero-figure">
+          <img src="../assets/projects/proximity-sensor-bracket/cover.svg" width="1600" height="1000" alt="Adjustable Proximity Sensor Mounting Bracket — full SOLIDWORKS assembly cover">
+          <figcaption class="case-hero-caption">
+            <span>FIG. 00 &mdash; Adjustable Proximity Sensor Mounting Bracket Assembly</span>
+            <span>SOLIDWORKS 3D CAD</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 5–7. Scope Note Callout, Overview, Key Specifications -->
+    <section class="case-section">
+      <div class="container">
+        <div class="callout" role="note">
+          <div class="callout-title">Project Scope Note</div>
+          <p>
+            Digital design project &mdash; physical manufacturing and testing have not been performed. The M12 sensor model is manufacturer reference CAD.
+          </p>
+        </div>
+
+        <div class="case-two-col">
+          <div class="case-copy">
+            <h2>Engineering Overview</h2>
+            <p>
+              This project presents a complete SOLIDWORKS mechanical assembly designed to mount and position an industrial M12 proximity sensor with controlled linear adjustment.
+            </p>
+            <p>
+              The system pairs a machined aluminum base plate with an adjustable L-shaped sensor bracket and standard fastening hardware, providing a 25 mm linear adjustment range so sensor position can be set accurately relative to a target surface.
+            </p>
+            <p>
+              Alongside the 3D assembly and exploded view, the package includes manufacturing-style 2D technical drawings for both custom parts and digital interference checks performed inside SOLIDWORKS.
+            </p>
+          </div>
+
+          <aside class="spec-sheet" aria-label="Technical specifications">
+            <div class="spec-sheet-head">
+              <span>KEY SPECIFICATIONS</span>
+              <span>PRJ-01 // SPECS</span>
+            </div>
+            <dl class="spec-dl">
+              <div class="spec-row">
+                <dt>Software</dt>
+                <dd>SOLIDWORKS</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Sensor</dt>
+                <dd>Industrial M12 proximity sensor (manufacturer reference CAD)</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Linear adjustment</dt>
+                <dd>25 mm</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Base plate</dt>
+                <dd>Machined aluminum</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Bracket</dt>
+                <dd>L-shaped, adjustable</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Hardware</dt>
+                <dd>Standard fasteners</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Drawings</dt>
+                <dd>2 part drawings</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Verification</dt>
+                <dd>Digital interference detection (SOLIDWORKS)</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Physical manufacturing / testing</dt>
+                <dd>Not performed</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Design Breakdown / Components (BOM-style table, NO quantities) -->
+    <section class="case-section">
+      <div class="container">
+        <h2 class="case-section-heading">Design Breakdown &amp; Components</h2>
+        <div class="matrix-wrap">
+          <div class="matrix-head">
+            <h3>Assembly Component Breakdown</h3>
+            <span class="mono" style="font-size: 0.75rem; color: var(--muted);">SOLIDWORKS ASSEMBLY STRUCTURE</span>
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Component</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mono-cell">01</td>
+                <td>Aluminum Base Plate</td>
+                <td>Machined aluminum base providing a rigid mounting interface and attachment geometry for the bracket.</td>
+              </tr>
+              <tr>
+                <td class="mono-cell">02</td>
+                <td>Adjustable L-Shaped Bracket</td>
+                <td>Custom L-bracket supporting the M12 sensor bore on the vertical flange and 25 mm linear slot adjustment along the base interface.</td>
+              </tr>
+              <tr>
+                <td class="mono-cell">03</td>
+                <td>Industrial M12 Proximity Sensor</td>
+                <td>Manufacturer reference CAD model representing a standard cylindrical M12 industrial proximity sensor.</td>
+              </tr>
+              <tr>
+                <td class="mono-cell">04</td>
+                <td>Standard Fastening Hardware</td>
+                <td>Standard mechanical fasteners used to clamp the adjustable bracket and secure the assembly cleanly.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Gallery Grid (Lightbox Enabled) -->
+    <section class="case-section">
+      <div class="container">
+        <h2 class="case-section-heading">CAD Gallery &amp; Assembly Views</h2>
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <button type="button" class="gallery-trigger" data-lightbox="project-01" data-src="../assets/projects/proximity-sensor-bracket/01-assembly-iso.svg" data-alt="Complete SOLIDWORKS 3D isometric assembly view" data-caption="FIG. 01 — Complete SOLIDWORKS 3D assembly (Isometric view)">
+              <div class="gallery-thumb">
+                <img src="../assets/projects/proximity-sensor-bracket/01-assembly-iso.svg" width="1600" height="1000" loading="lazy" decoding="async" alt="Complete SOLIDWORKS 3D isometric assembly view">
+                <span class="gallery-zoom-pill">Inspect</span>
+              </div>
+              <figcaption class="gallery-caption">FIG. 01 &mdash; Complete 3D assembly in isometric orientation</figcaption>
+            </button>
+          </figure>
+
+          <figure class="gallery-item">
+            <button type="button" class="gallery-trigger" data-lightbox="project-01" data-src="../assets/projects/proximity-sensor-bracket/02-exploded-view.svg" data-alt="Exploded assembly view showing base plate, L-bracket, M12 sensor, and standard fasteners" data-caption="FIG. 02 — Exploded assembly view showing component alignment and fastening hardware">
+              <div class="gallery-thumb">
+                <img src="../assets/projects/proximity-sensor-bracket/02-exploded-view.svg" width="1600" height="1000" loading="lazy" decoding="async" alt="Exploded assembly view showing base plate, L-bracket, M12 sensor, and standard fasteners">
+                <span class="gallery-zoom-pill">Inspect</span>
+              </div>
+              <figcaption class="gallery-caption">FIG. 02 &mdash; Exploded view of assembly components</figcaption>
+            </button>
+          </figure>
+
+          <figure class="gallery-item">
+            <button type="button" class="gallery-trigger" data-lightbox="project-01" data-src="../assets/projects/proximity-sensor-bracket/03-adjustment-range.svg" data-alt="25 mm linear adjustment range detail across the bracket slot" data-caption="FIG. 03 — 25 mm linear adjustment travel along the slotted mounting interface">
+              <div class="gallery-thumb">
+                <img src="../assets/projects/proximity-sensor-bracket/03-adjustment-range.svg" width="1600" height="1000" loading="lazy" decoding="async" alt="25 mm linear adjustment range detail across the bracket slot">
+                <span class="gallery-zoom-pill">Inspect</span>
+              </div>
+              <figcaption class="gallery-caption">FIG. 03 &mdash; 25 mm linear adjustment range</figcaption>
+            </button>
+          </figure>
+
+          <figure class="gallery-item">
+            <button type="button" class="gallery-trigger" data-lightbox="project-01" data-src="../assets/projects/proximity-sensor-bracket/04-interference-check.svg" data-alt="SOLIDWORKS digital interference detection view" data-caption="FIG. 04 — SOLIDWORKS digital interference check across mated components">
+              <div class="gallery-thumb">
+                <img src="../assets/projects/proximity-sensor-bracket/04-interference-check.svg" width="1600" height="1000" loading="lazy" decoding="async" alt="SOLIDWORKS digital interference detection view">
+                <span class="gallery-zoom-pill">Inspect</span>
+              </div>
+              <figcaption class="gallery-caption">FIG. 04 &mdash; Digital interference detection check</figcaption>
+            </button>
+          </figure>
+
+          <figure class="gallery-item">
+            <button type="button" class="gallery-trigger" data-lightbox="project-01" data-src="../assets/projects/proximity-sensor-bracket/05-sensor-detail.svg" data-alt="Industrial M12 proximity sensor mounting interface detail" data-caption="FIG. 05 — M12 proximity sensor mounting interface (manufacturer reference CAD)">
+              <div class="gallery-thumb">
+                <img src="../assets/projects/proximity-sensor-bracket/05-sensor-detail.svg" width="1600" height="1000" loading="lazy" decoding="async" alt="Industrial M12 proximity sensor mounting interface detail">
+                <span class="gallery-zoom-pill">Inspect</span>
+              </div>
+              <figcaption class="gallery-caption">FIG. 05 &mdash; M12 sensor mounting interface detail</figcaption>
+            </button>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Drawings Section -->
+    <section class="case-section">
+      <div class="container">
+        <h2 class="case-section-heading">2D Technical Drawings</h2>
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <button type="button" class="gallery-trigger" data-lightbox="project-01" data-src="../assets/projects/proximity-sensor-bracket/drawing-base-plate.svg" data-alt="2D technical part drawing preview for the machined aluminum base plate" data-caption="SHEET 01 — Technical part drawing: Machined Aluminum Base Plate">
+              <div class="gallery-thumb gallery-thumb--drawing">
+                <img src="../assets/projects/proximity-sensor-bracket/drawing-base-plate.svg" width="1600" height="1131" loading="lazy" decoding="async" alt="2D technical part drawing preview for the machined aluminum base plate">
+                <span class="gallery-zoom-pill">Preview Sheet</span>
+              </div>
+              <figcaption class="gallery-caption">Sheet 01 &mdash; Aluminum Base Plate (Part Drawing)</figcaption>
+            </button>
+            <div class="drawing-card-actions">
+              <span class="mono" style="font-size: 0.72rem; color: var(--muted);">SOLIDWORKS 2D DRAWING</span>
+              <a href="../assets/projects/proximity-sensor-bracket/drawing-base-plate.pdf" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Open PDF &rarr;</a>
+            </div>
+          </figure>
+
+          <figure class="gallery-item">
+            <button type="button" class="gallery-trigger" data-lightbox="project-01" data-src="../assets/projects/proximity-sensor-bracket/drawing-l-bracket.svg" data-alt="2D technical part drawing preview for the adjustable L-shaped bracket" data-caption="SHEET 02 — Technical part drawing: Adjustable L-Shaped Bracket">
+              <div class="gallery-thumb gallery-thumb--drawing">
+                <img src="../assets/projects/proximity-sensor-bracket/drawing-l-bracket.svg" width="1600" height="1131" loading="lazy" decoding="async" alt="2D technical part drawing preview for the adjustable L-shaped bracket">
+                <span class="gallery-zoom-pill">Preview Sheet</span>
+              </div>
+              <figcaption class="gallery-caption">Sheet 02 &mdash; Adjustable L-Bracket (Part Drawing)</figcaption>
+            </button>
+            <div class="drawing-card-actions">
+              <span class="mono" style="font-size: 0.72rem; color: var(--muted);">SOLIDWORKS 2D DRAWING</span>
+              <a href="../assets/projects/proximity-sensor-bracket/drawing-l-bracket.pdf" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Open PDF &rarr;</a>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11–12. Verification, Limitations & Possible Next Steps -->
+    <section class="case-section">
+      <div class="container">
+        <div class="case-two-col">
+          <div class="case-copy">
+            <h2>Digital Verification</h2>
+            <p>
+              Assembly relationships were checked in SOLIDWORKS using standard mate definitions for component alignment and linear travel along the 25 mm adjustment slot.
+            </p>
+            <p>
+              Digital interference detection was performed in SOLIDWORKS across the assembly components, and an exploded view was created to verify assembly order and fastener access.
+            </p>
+          </div>
+
+          <div class="case-copy">
+            <h2>Limitations &amp; Possible Next Steps</h2>
+            <p>
+              This case study covers 3D CAD modeling, digital interference checks, and manufacturing-style 2D drawings only. Physical machining, assembly, and sensor testing have not been performed.
+            </p>
+            <p>
+              Possible next steps if taken toward fabrication could include producing a physical prototype, performing a formal tolerance study across the mating hardware, and running functional fit and vibration checks with the target sensor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. Downloads -->
+    <section class="case-section">
+      <div class="container">
+        <h2 class="case-section-heading">Project Drawing Downloads</h2>
+        <div class="docs-grid">
+          <article class="cad-card doc-card">
+            <div class="doc-card-head">
+              <span class="mono" style="font-size: 0.75rem; color: var(--muted);">DRAWING 01</span>
+              <span class="file-badge">PDF</span>
+            </div>
+            <h3>Base Plate Technical Drawing</h3>
+            <p>2D manufacturing-style drawing for the machined aluminum base plate.</p>
+            <a href="../assets/projects/proximity-sensor-bracket/drawing-base-plate.pdf" class="btn btn-ghost btn-sm" download>
+              <span>Download Drawing 01 (PDF)</span>
+              <span class="arrow" aria-hidden="true">&darr;</span>
+            </a>
+          </article>
+
+          <article class="cad-card doc-card">
+            <div class="doc-card-head">
+              <span class="mono" style="font-size: 0.75rem; color: var(--muted);">DRAWING 02</span>
+              <span class="file-badge">PDF</span>
+            </div>
+            <h3>Adjustable L-Bracket Drawing</h3>
+            <p>2D manufacturing-style drawing for the L-shaped sensor mounting bracket.</p>
+            <a href="../assets/projects/proximity-sensor-bracket/drawing-l-bracket.pdf" class="btn btn-ghost btn-sm" download>
+              <span>Download Drawing 02 (PDF)</span>
+              <span class="arrow" aria-hidden="true">&darr;</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14–15. Prev/Next Navigation & Back to All Projects -->
+    <section class="case-section">
+      <div class="container">
+        <nav class="project-pager" aria-label="Project navigation">
+          <a href="../index.html#projects" class="cad-card pager-card">
+            <span class="pager-dir">&larr; Back to all projects</span>
+            <span class="pager-title">Portfolio Overview</span>
+          </a>
+
+          <a href="precision-clamp-reverse-engineering.html" class="cad-card pager-card pager-card--next">
+            <span class="pager-dir">Next Project (02) &rarr;</span>
+            <span class="pager-title">Precision Clamp Reverse Engineering</span>
+          </a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-cell-label">ENGINEER</div>
+          <div class="footer-cell-val">Kareem Zaghloul</div>
+        </div>
+        <div>
+          <div class="footer-cell-label">DISCIPLINE</div>
+          <div class="footer-cell-val">Mechanical CAD &amp; CAM Student</div>
+        </div>
+        <div>
+          <div class="footer-cell-label">LINKS</div>
+          <div class="footer-links">
+            <a href="https://www.linkedin.com/in/kareem-zaghloul-7426b5449/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/kareemzaghloul" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="../index.html#projects">All Projects</a>
+          </div>
+        </div>
+        <div>
+          <a href="#top" class="btn btn-ghost btn-sm">Back to top &uarr;</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span id="footer-year">2026</span> Kareem Zaghloul &middot; Mechanical CAD Portfolio</span>
+        <span>Al-Balqa Applied University &middot; Jordan</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/lightbox.js" defer></script>
+</body>
+</html>

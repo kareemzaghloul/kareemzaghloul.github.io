@@ -2,385 +2,837 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kareem Zaghloul's mechanical CAD and engineering design portfolio.">
-  <title>Kareem Zaghloul | Mechanical CAD Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kareem Zaghloul | Mechanical CAD Designer &amp; CAM Portfolio</title>
+  <meta name="description" content="Mechanical CAD and Computer-Aided Manufacturing portfolio of Kareem Zaghloul (Al-Balqa Applied University, Jordan). SOLIDWORKS assemblies, technical drawings, and manufacturing-oriented design.">
+  <meta name="theme-color" content="#070B14">
+  <link rel="canonical" href="https://kareemzaghloul.github.io/">
 
-  <style>
-    :root {
-      --bg: #0b1120;
-      --panel: #151f32;
-      --text: #f1f5f9;
-      --muted: #a1aec3;
-      --accent: #57c7db;
-      --line: #2a3850;
-    }
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kareem Zaghloul | Mechanical CAD Designer &amp; CAM Portfolio">
+  <meta property="og:description" content="Mechanical CAD projects in SOLIDWORKS and AutoCAD, focusing on assemblies, 2D engineering drawings, and manufacturing-oriented design.">
+  <meta property="og:url" content="https://kareemzaghloul.github.io/">
+  <meta property="og:image" content="https://kareemzaghloul.github.io/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kareem Zaghloul | Mechanical CAD Portfolio">
+  <meta name="twitter:description" content="Mechanical CAD projects in SOLIDWORKS and AutoCAD, technical drawings, and manufacturing-oriented design.">
+  <meta name="twitter:image" content="https://kareemzaghloul.github.io/assets/img/og-image.png">
 
-    * { box-sizing: border-box; }
+  <!-- Icons & Manifest -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
 
-    html { scroll-behavior: smooth; }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Inter, "Segoe UI", Arial, sans-serif;
-      line-height: 1.7;
-    }
+  <link rel="stylesheet" href="assets/css/style.css">
 
-    a { color: inherit; text-decoration: none; }
-
-    .container {
-      width: min(1100px, 90%);
-      margin: auto;
-    }
-
-    header {
-      border-bottom: 1px solid var(--line);
-      background: #0b1120ee;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 18px;
-      padding: 23px 0;
-    }
-
-    .logo {
-      font-size: 19px;
-      font-weight: 750;
-      letter-spacing: -.5px;
-    }
-
-    .logo span { color: var(--accent); }
-
-    .nav-links {
-      display: flex;
-      gap: 25px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .nav-links a:hover { color: var(--accent); }
-
-    .hero {
-      padding: 105px 0 90px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .eyebrow {
-      color: var(--accent);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: bold;
-    }
-
-    h1 {
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.12;
-      letter-spacing: -2px;
-      margin: 17px 0;
-    }
-
-    .hero p {
-      color: var(--muted);
-      font-size: 18px;
-      max-width: 670px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
-      margin-top: 32px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      border-radius: 7px;
-      border: 1px solid var(--line);
-      font-size: 14px;
-      font-weight: 650;
-    }
-
-    .btn.primary {
-      background: var(--accent);
-      color: #08121d;
-      border-color: var(--accent);
-    }
-
-    .btn:hover { opacity: .85; }
-
-    section { padding: 80px 0; }
-
-    h2 {
-      font-size: 31px;
-      letter-spacing: -.8px;
-      margin: 0 0 15px;
-    }
-
-    .section-intro {
-      color: var(--muted);
-      max-width: 700px;
-      margin-bottom: 32px;
-    }
-
-    .project {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 34px;
-    }
-
-    .project-number {
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    .project h3 {
-      font-size: 27px;
-      margin: 12px 0;
-    }
-
-    .project p { color: var(--muted); }
-
-    .details {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      margin: 28px 0;
-    }
-
-    .detail {
-      background: #0e1728;
-      padding: 17px;
-      border: 1px solid var(--line);
-      border-radius: 9px;
-    }
-
-    .detail strong {
-      display: block;
-      font-size: 22px;
-      color: var(--accent);
-    }
-
-    .detail span {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .tags {
-      display: flex;
-      gap: 9px;
-      flex-wrap: wrap;
-      margin-top: 25px;
-    }
-
-    .tag {
-      border: 1px solid #34435b;
-      color: #c9d8e7;
-      padding: 5px 12px;
-      border-radius: 5px;
-      font-size: 12px;
-    }
-
-    .skill-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-
-    .skill {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 9px;
-      padding: 23px;
-    }
-
-    .skill strong { display: block; }
-
-    .skill p {
-      color: var(--muted);
-      font-size: 13px;
-      margin-bottom: 0;
-    }
-
-    .about {
-      max-width: 750px;
-      color: var(--muted);
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 30px 0;
-      color: var(--muted);
-      font-size: 13px;
-      text-align: center;
-    }
-
-    @media (max-width: 650px) {
-      .hero { padding: 75px 0; }
-      section { padding: 55px 0; }
-      .details, .skill-grid { grid-template-columns: 1fr; }
-      .project { padding: 23px; }
-      .nav-links { gap: 15px; }
-    }
-  </style>
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kareem Zaghloul",
+    "url": "https://kareemzaghloul.github.io/",
+    "jobTitle": "Mechanical CAD Designer",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Al-Balqa Applied University"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "JO"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/kareem-zaghloul-7426b5449/",
+      "https://github.com/kareemzaghloul"
+    ]
+  }
+  </script>
 </head>
+<body id="top">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<body>
-  <header>
-    <div class="container">
-      <nav>
-        <a class="logo" href="#">KAREEM<span>.</span>ZAGHLOUL</a>
-        <div class="nav-links">
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </div>
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand-mark" aria-label="Kareem Zaghloul Home">
+        <span class="brand-badge" aria-hidden="true">KZ</span>
+        <span>KAREEM ZAGHLOUL</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#expertise" class="nav-link">Expertise</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
+          <li><a href="#documents" class="nav-link">Documents</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
       </nav>
+
+      <div class="header-actions">
+        <a href="https://www.linkedin.com/in/kareem-zaghloul-7426b5449/" class="icon-link" target="_blank" rel="noopener noreferrer" aria-label="Kareem Zaghloul on LinkedIn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+          <span class="nav-toggle-lines" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main>
-    <div class="hero">
-      <div class="container">
-        <div class="eyebrow">Mechanical CAD & Engineering Design</div>
-        <h1>Kareem Zaghloul</h1>
-        <p>
-          Mechanical CAD Designer and Computer-Aided Manufacturing
-          student, focused on 3D modeling, mechanical assemblies,
-          technical drawings, and manufacturing-oriented design.
-        </p>
-
-        <div class="buttons">
-          <a class="btn primary" href="#projects">Explore My Projects</a>
-          <a class="btn" href="#contact">Get in Touch</a>
-        </div>
-      </div>
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true" aria-label="Mobile navigation">
+    <ul class="mobile-menu-list">
+      <li><a href="#about" class="mobile-menu-link"><span class="mono">01</span><span>About</span></a></li>
+      <li><a href="#expertise" class="mobile-menu-link"><span class="mono">02</span><span>Expertise</span></a></li>
+      <li><a href="#projects" class="mobile-menu-link"><span class="mono">03</span><span>Projects</span></a></li>
+      <li><a href="#process" class="mobile-menu-link"><span class="mono">04</span><span>Process</span></a></li>
+      <li><a href="#documents" class="mobile-menu-link"><span class="mono">05</span><span>Documents</span></a></li>
+      <li><a href="#contact" class="mobile-menu-link"><span class="mono">06</span><span>Contact</span></a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+      <a href="https://www.linkedin.com/in/kareem-zaghloul-7426b5449/" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+      <a href="https://github.com/kareemzaghloul" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
     </div>
+  </div>
 
-    <section id="projects">
-      <div class="container">
-        <h2>Selected Projects</h2>
-        <p class="section-intro">
-          A collection of mechanical CAD projects documenting
-          design decisions, assemblies, technical drawings,
-          and practical manufacturing considerations.
-        </p>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="hero blueprint-bg" aria-label="Introduction">
+      <div class="hero-coords" id="hero-coords-readout" aria-hidden="true">X 000.00  Y 000.00 mm</div>
 
-        <article class="project">
-          <div class="project-number">PROJECT 01 / MECHANICAL DESIGN</div>
-          <h3>Adjustable Proximity Sensor Mounting Bracket</h3>
-
-          <p>
-            An adjustable mounting system designed in SOLIDWORKS
-            for an industrial M12 proximity sensor. The assembly
-            includes a machined aluminum base plate, an L-shaped
-            sensor bracket, and standard fastening hardware.
-          </p>
-
-          <div class="details">
-            <div class="detail">
-              <strong>25 mm</strong>
-              <span>Linear adjustment range</span>
+      <div class="container hero-main">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="hero-eyebrow">
+              <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+              <span>MECHANICAL CAD DESIGNER &middot; CAM STUDENT &middot; JORDAN</span>
             </div>
-            <div class="detail">
-              <strong>M12</strong>
-              <span>Industrial proximity sensor</span>
-            </div>
-            <div class="detail">
-              <strong>2</strong>
-              <span>Technical part drawings</span>
+
+            <h1 class="hero-name">
+              <span>Kareem</span>
+              <span class="accent-line">Zaghloul</span>
+            </h1>
+
+            <p class="hero-lead">
+              I design mechanical parts and assemblies in SOLIDWORKS, with manufacturing, documentation and fit in mind.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                <span>View projects</span>
+                <span class="arrow" aria-hidden="true">&rarr;</span>
+              </a>
+              <a href="assets/docs/Kareem-Zaghloul-CV.pdf" class="btn btn-ghost" download>
+                <span>Download CV</span>
+                <span class="arrow" aria-hidden="true">&darr;</span>
+              </a>
             </div>
           </div>
 
-          <p>
-            The project includes a complete 3D assembly,
-            exploded view, manufacturing-style drawings,
-            and digital interference checks.
-            The sensor uses manufacturer reference CAD.
-            Physical manufacturing and testing have not
-            been performed.
-          </p>
+          <div class="hero-schematic-wrap reveal">
+            <div class="hero-schematic-head">
+              <span class="cyan">SCHEMATIC &mdash; PROJECT 01</span>
+              <span>M12 MOUNT &middot; 25 mm SLOT</span>
+            </div>
 
-          <div class="tags">
-            <span class="tag">SOLIDWORKS</span>
-            <span class="tag">3D Modeling</span>
-            <span class="tag">Assembly Design</span>
-            <span class="tag">Technical Drawings</span>
-            <span class="tag">Design for Manufacturing</span>
+            <svg class="hero-schematic-svg" viewBox="0 0 520 380" width="520" height="380" role="img" aria-label="Technical schematic of an adjustable L-bracket featuring an M12 sensor bore and a 25 mm adjustment slot">
+              <defs>
+                <marker id="dimArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#00E5FF"/>
+                </marker>
+              </defs>
+
+              <!-- Subtle Schematic Frame -->
+              <rect x="18" y="18" width="484" height="344" fill="rgba(7,11,20,0.55)" stroke="rgba(148,180,220,0.18)" stroke-width="1"/>
+
+              <!-- Base Plate Footprint -->
+              <rect x="74" y="250" width="372" height="44" fill="rgba(20,31,51,0.75)" stroke="#8A99B0" stroke-width="1.5"/>
+              <line x1="74" y1="262" x2="446" y2="262" stroke="rgba(148,180,220,0.28)" stroke-width="1" stroke-dasharray="4 4"/>
+
+              <!-- L-Bracket Profile -->
+              <path class="draw-line" d="M 140 82 H 214 V 192 H 378 V 250 H 140 Z" fill="rgba(0,229,255,0.06)" stroke="#E6EDF7" stroke-width="2"/>
+              <path d="M 214 192 Q 214 176 230 176" fill="none" stroke="rgba(148,180,220,0.45)" stroke-width="1.2"/>
+
+              <!-- M12 Sensor Bore on Vertical Flange -->
+              <circle cx="177" cy="130" r="24" fill="rgba(7,11,20,0.9)" stroke="#00E5FF" stroke-width="1.8"/>
+              <circle cx="177" cy="130" r="30" fill="none" stroke="rgba(0,229,255,0.4)" stroke-width="1" stroke-dasharray="5 3"/>
+
+              <!-- Centerlines -->
+              <line x1="130" y1="130" x2="256" y2="130" stroke="#00E5FF" stroke-width="1" stroke-dasharray="12 4 3 4" opacity="0.7"/>
+              <line x1="177" y1="70" x2="177" y2="205" stroke="#00E5FF" stroke-width="1" stroke-dasharray="12 4 3 4" opacity="0.7"/>
+
+              <!-- 25 mm Linear Adjustment Slot -->
+              <rect x="256" y="210" width="96" height="22" rx="11" fill="#070B14" stroke="#00E5FF" stroke-width="1.8"/>
+              <line x1="242" y1="221" x2="366" y2="221" stroke="#00E5FF" stroke-width="1" stroke-dasharray="10 4 3 4" opacity="0.75"/>
+              <line x1="267" y1="198" x2="267" y2="244" stroke="rgba(148,180,220,0.5)" stroke-width="1" stroke-dasharray="4 3"/>
+              <line x1="341" y1="198" x2="341" y2="244" stroke="rgba(148,180,220,0.5)" stroke-width="1" stroke-dasharray="4 3"/>
+
+              <!-- Dimension Line: 25 mm Adjustment -->
+              <line class="draw-line-delay" x1="267" y1="168" x2="267" y2="198" stroke="rgba(0,229,255,0.65)" stroke-width="1"/>
+              <line class="draw-line-delay" x1="341" y1="168" x2="341" y2="198" stroke="rgba(0,229,255,0.65)" stroke-width="1"/>
+              <line class="draw-line-delay" x1="270" y1="174" x2="338" y2="174" stroke="#00E5FF" stroke-width="1.5" marker-start="url(#dimArrow)" marker-end="url(#dimArrow)"/>
+              <rect x="282" y="150" width="44" height="18" rx="2" fill="#070B14"/>
+              <text x="304" y="163" text-anchor="middle" fill="#00E5FF" font-family="JetBrains Mono, monospace" font-size="12" font-weight="500">25</text>
+
+              <!-- M12 Callout -->
+              <polyline class="draw-line-delay" points="195,112 246,74 334,74" fill="none" stroke="#00E5FF" stroke-width="1.3"/>
+              <text x="252" y="68" fill="#E6EDF7" font-family="JetBrains Mono, monospace" font-size="11">M12 SENSOR BORE</text>
+
+              <!-- Base Plate Callout -->
+              <polyline class="draw-line-delay" points="390,276 418,318 468,318" fill="none" stroke="#8A99B0" stroke-width="1.2"/>
+              <text x="252" y="322" fill="#8A99B0" font-family="JetBrains Mono, monospace" font-size="11">ALUMINUM BASE PLATE</text>
+            </svg>
+
+            <div class="hero-schematic-foot">
+              <span>VIEW: SECTION / PROFILE</span>
+              <span>SOLIDWORKS REFERENCE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container hero-bottom">
+        <div class="hero-stats" aria-label="Portfolio summary">
+          <div class="hero-stat">
+            <div class="hero-stat-value">07</div>
+            <div class="hero-stat-label">Projects in roadmap</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">01</div>
+            <div class="hero-stat-label">Completed case study</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">SOLIDWORKS</div>
+            <div class="hero-stat-label">Primary CAD tool</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">Al-Balqa</div>
+            <div class="hero-stat-label">Applied University, Jordan</div>
+          </div>
+        </div>
+
+        <div class="title-block-strip" aria-hidden="true">
+          <span>DWG <strong>KZ-PF-2026</strong></span>
+          <span>SHEET <strong>1/1</strong></span>
+          <span>REV <strong>A</strong></span>
+          <span>SCALE <strong>1:1</strong></span>
+          <span>UNITS <strong>mm</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- § 01 — About -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-head-copy">
+            <div class="section-label">&sect; 01 &mdash; About</div>
+            <h2 class="section-title">Practical CAD modeling built around manufacturability.</h2>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p>
+              I am <strong>Kareem Zaghloul</strong>, a Computer-Aided Manufacturing student at <strong>Al-Balqa Applied University</strong> in Jordan. My focus is mechanical CAD design, structured 3D assemblies, and clear 2D engineering documentation.
+            </p>
+            <p>
+              Rather than treating CAD as isolated surface geometry, I approach each part and assembly with machining access, fastening hardware, fit, and drawing clarity in mind.
+            </p>
+            <p>
+              This portfolio documents a structured 7-project progression: starting with a completed industrial sensor mounting assembly and expanding through reverse engineering, sheet metal, workholding fixtures, linkages, gearboxes, and fluid machinery.
+            </p>
+          </div>
+
+          <aside class="spec-sheet reveal reveal-delay-1" aria-label="Profile specification sheet">
+            <div class="spec-sheet-head">
+              <span>PROFILE SPEC SHEET</span>
+              <span>DOC REF // KZ-01</span>
+            </div>
+            <dl class="spec-dl">
+              <div class="spec-row">
+                <dt>Discipline</dt>
+                <dd>Computer-Aided Manufacturing (student)</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Institution</dt>
+                <dd>Al-Balqa Applied University</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Location</dt>
+                <dd>Jordan</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Primary CAD</dt>
+                <dd>SOLIDWORKS</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Drafting</dt>
+                <dd>AutoCAD</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Focus</dt>
+                <dd>Assemblies, technical drawings, manufacturing-oriented design</dd>
+              </div>
+              <div class="spec-row">
+                <dt>Currently</dt>
+                <dd>Building a 7-project engineering portfolio</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- § 02 — Technical Expertise -->
+    <section id="expertise" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-head-copy">
+            <div class="section-label">&sect; 02 &mdash; Technical Expertise</div>
+            <h2 class="section-title">Tools, methods, and verified scope.</h2>
+            <p class="section-lead">
+              Capabilities are separated transparently between skills demonstrated in completed work and areas scheduled across the remaining portfolio roadmap.
+            </p>
+          </div>
+        </div>
+
+        <div class="expertise-cards">
+          <article class="cad-card expertise-card reveal">
+            <div class="expertise-card-num">TOOL 01 / 3D CAD</div>
+            <h3>SOLIDWORKS</h3>
+            <p>Parametric part modeling, multi-part assemblies with mate logic, exploded views, interference detection, and manufacturing-style 2D drawings.</p>
+            <div class="expertise-card-tags">
+              <span class="tag-chip">Part Modeling</span>
+              <span class="tag-chip">Assemblies</span>
+              <span class="tag-chip">Drawings</span>
+            </div>
+          </article>
+
+          <article class="cad-card expertise-card reveal reveal-delay-1">
+            <div class="expertise-card-num">TOOL 02 / 2D CAD</div>
+            <h3>AutoCAD</h3>
+            <p>2D technical drafting, orthographic layouts, dimensioning discipline, and structured documentation for engineering review.</p>
+            <div class="expertise-card-tags">
+              <span class="tag-chip">2D Drafting</span>
+              <span class="tag-chip">Orthographic Views</span>
+              <span class="tag-chip">Documentation</span>
+            </div>
+          </article>
+
+          <article class="cad-card expertise-card reveal reveal-delay-2">
+            <div class="expertise-card-num">FOCUS 03 / DFM</div>
+            <h3>Manufacturing-Oriented Design</h3>
+            <p>Designing parts with machining setup, fastener clearance, tool access, and realistic fabrication sequence in mind.</p>
+            <div class="expertise-card-tags">
+              <span class="tag-chip">Machining Access</span>
+              <span class="tag-chip">Hardware Selection</span>
+              <span class="tag-chip">Detailing</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="matrix-wrap reveal">
+          <div class="matrix-head">
+            <h3>Capability &amp; Roadmap Matrix</h3>
+            <span class="mono" style="font-size: 0.75rem; color: var(--muted);">HONEST STATUS TRACKING</span>
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Capability Area</th>
+                <th scope="col">Evidence / Scope</th>
+                <th scope="col">Portfolio Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Part modeling</td>
+                <td class="mono-cell">Project 01 &mdash; Base plate &amp; L-bracket</td>
+                <td><span class="status-inline status-inline--ok">&bull; Demonstrated &mdash; Project 01</span></td>
+              </tr>
+              <tr>
+                <td>Assemblies &amp; mates</td>
+                <td class="mono-cell">Project 01 &mdash; Sensor, bracket &amp; hardware</td>
+                <td><span class="status-inline status-inline--ok">&bull; Demonstrated &mdash; Project 01</span></td>
+              </tr>
+              <tr>
+                <td>Exploded views</td>
+                <td class="mono-cell">Project 01 &mdash; Assembly breakdown</td>
+                <td><span class="status-inline status-inline--ok">&bull; Demonstrated &mdash; Project 01</span></td>
+              </tr>
+              <tr>
+                <td>Technical drawings</td>
+                <td class="mono-cell">Project 01 &mdash; 2 manufacturing-style drawings</td>
+                <td><span class="status-inline status-inline--ok">&bull; Demonstrated &mdash; Project 01</span></td>
+              </tr>
+              <tr>
+                <td>Interference detection</td>
+                <td class="mono-cell">Project 01 &mdash; SOLIDWORKS digital check</td>
+                <td><span class="status-inline status-inline--ok">&bull; Demonstrated &mdash; Project 01</span></td>
+              </tr>
+              <tr>
+                <td>Reverse engineering</td>
+                <td class="mono-cell">Project 02 &mdash; Precision clamp</td>
+                <td><span class="status-inline status-inline--plan">&circ; Developing &mdash; Roadmap 02</span></td>
+              </tr>
+              <tr>
+                <td>Sheet metal &amp; flat patterns</td>
+                <td class="mono-cell">Project 03 &mdash; Industrial enclosure</td>
+                <td><span class="status-inline status-inline--plan">&circ; Developing &mdash; Roadmap 03</span></td>
+              </tr>
+              <tr>
+                <td>Fixture design</td>
+                <td class="mono-cell">Project 04 &mdash; CNC machining fixture</td>
+                <td><span class="status-inline status-inline--plan">&circ; Developing &mdash; Roadmap 04</span></td>
+              </tr>
+              <tr>
+                <td>Motion analysis</td>
+                <td class="mono-cell">Project 05 &mdash; Automotive pedal mechanism</td>
+                <td><span class="status-inline status-inline--plan">&circ; Developing &mdash; Roadmap 05</span></td>
+              </tr>
+              <tr>
+                <td>Gear &amp; bearing design</td>
+                <td class="mono-cell">Project 06 &mdash; Advanced planetary gearbox</td>
+                <td><span class="status-inline status-inline--plan">&circ; Developing &mdash; Roadmap 06</span></td>
+              </tr>
+              <tr>
+                <td>Pump systems</td>
+                <td class="mono-cell">Project 07 &mdash; Centrifugal pump study</td>
+                <td><span class="status-inline status-inline--plan">&circ; Developing &mdash; Roadmap 07</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- § 03 — Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-head-copy">
+            <div class="section-label">&sect; 03 &mdash; Projects</div>
+            <h2 class="section-title">Selected work &amp; engineering roadmap.</h2>
+            <p class="section-lead">
+              One completed SOLIDWORKS case study and six planned projects structured from foundational mechanical assemblies to advanced multi-component systems.
+            </p>
+          </div>
+
+          <div class="filter-bar" role="group" aria-label="Filter projects by status">
+            <button type="button" class="filter-chip" data-filter="all" aria-pressed="true">All (07)</button>
+            <button type="button" class="filter-chip" data-filter="completed" aria-pressed="false">Completed (01)</button>
+            <button type="button" class="filter-chip" data-filter="next" aria-pressed="false">Next (01)</button>
+            <button type="button" class="filter-chip" data-filter="planned" aria-pressed="false">Planned (05)</button>
+          </div>
+        </div>
+
+        <p class="sr-only" id="projects-filter-status" aria-live="polite">Showing 7 of 7 projects</p>
+
+        <!-- Featured Project 01 -->
+        <article class="cad-card featured-project reveal" data-project-card data-status="completed">
+          <div class="featured-media">
+            <img src="assets/projects/proximity-sensor-bracket/cover.svg" width="1600" height="1000" alt="Adjustable Proximity Sensor Mounting Bracket — SOLIDWORKS CAD assembly cover">
+          </div>
+          <div class="featured-body">
+            <div class="project-meta-row">
+              <span class="project-code">PROJECT 01 / MECHANICAL DESIGN</span>
+              <span class="status-badge status-badge--completed">Completed</span>
+            </div>
+
+            <h3>Adjustable Proximity Sensor Mounting Bracket</h3>
+
+            <p>
+              An adjustable mounting system designed in SOLIDWORKS for an industrial M12 proximity sensor, combining a machined aluminum base plate, an L-shaped adjustable sensor bracket, and standard fastening hardware.
+            </p>
+
+            <div class="spec-chips">
+              <span class="spec-chip">25 mm adjustment</span>
+              <span class="spec-chip">M12 sensor</span>
+              <span class="spec-chip">2 part drawings</span>
+              <span class="spec-chip">SOLIDWORKS</span>
+            </div>
+
+            <div class="scope-note-inline">
+              Digital design project &mdash; physical manufacturing and testing have not been performed. The M12 sensor model is manufacturer reference CAD.
+            </div>
+
+            <div class="featured-foot">
+              <span class="level-label mono" style="font-size: 0.75rem;">Level: Basic &ndash; Intermediate</span>
+              <a href="projects/proximity-sensor-bracket.html" class="btn btn-primary btn-sm">
+                <span>Read case study</span>
+                <span class="arrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
           </div>
         </article>
-      </div>
-    </section>
 
-    <section id="skills">
-      <div class="container">
-        <h2>Technical Focus</h2>
-        <p class="section-intro">
-          Tools and technical areas represented in my CAD work.
-        </p>
+        <!-- Remaining 6 Projects Grid -->
+        <div class="projects-grid">
+          <article class="cad-card project-card reveal" data-project-card data-status="next">
+            <div class="project-card-media">
+              <img src="assets/projects/precision-clamp-reverse-engineering/cover.svg" width="1600" height="1000" loading="lazy" decoding="async" alt="Precision Clamp Reverse Engineering placeholder">
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-code">PROJECT 02</span>
+                <span class="status-badge status-badge--next">Next</span>
+              </div>
+              <h3>Precision Clamp Reverse Engineering</h3>
+              <p>Planned reverse engineering of a precision mechanical clamp, rebuilding its parts, full assembly, and dimensional documentation.</p>
+              <div class="project-card-foot">
+                <span class="level-label">Basic &ndash; Intermediate</span>
+                <a href="projects/precision-clamp-reverse-engineering.html" class="card-link-label">View brief <span class="arrow" aria-hidden="true">&rarr;</span></a>
+              </div>
+            </div>
+          </article>
 
-        <div class="skill-grid">
-          <div class="skill">
-            <strong>SOLIDWORKS</strong>
-            <p>Part modeling, assemblies, and engineering drawings.</p>
+          <article class="cad-card project-card reveal reveal-delay-1" data-project-card data-status="planned">
+            <div class="project-card-media">
+              <img src="assets/projects/sheet-metal-enclosure/cover.svg" width="1600" height="1000" loading="lazy" decoding="async" alt="Industrial Sheet Metal Enclosure placeholder">
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-code">PROJECT 03</span>
+                <span class="status-badge status-badge--planned">Planned</span>
+              </div>
+              <h3>Industrial Sheet Metal Enclosure</h3>
+              <p>Planned industrial sheet-metal enclosure incorporating bend features, mounting holes, panel openings, and flat-pattern drawings.</p>
+              <div class="project-card-foot">
+                <span class="level-label">Intermediate</span>
+                <a href="projects/sheet-metal-enclosure.html" class="card-link-label">View brief <span class="arrow" aria-hidden="true">&rarr;</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="cad-card project-card reveal reveal-delay-2" data-project-card data-status="planned">
+            <div class="project-card-media">
+              <img src="assets/projects/cnc-machining-fixture/cover.svg" width="1600" height="1000" loading="lazy" decoding="async" alt="CNC Machining Fixture placeholder">
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-code">PROJECT 04</span>
+                <span class="status-badge status-badge--planned">Planned</span>
+              </div>
+              <h3>CNC Machining Fixture</h3>
+              <p>Planned workholding fixture for securing a part on a CNC machine, covering locating points and clamping-force calculations.</p>
+              <div class="project-card-foot">
+                <span class="level-label">Intermediate &ndash; Advanced</span>
+                <a href="projects/cnc-machining-fixture.html" class="card-link-label">View brief <span class="arrow" aria-hidden="true">&rarr;</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="cad-card project-card reveal" data-project-card data-status="planned">
+            <div class="project-card-media">
+              <img src="assets/projects/automotive-pedal-mechanism/cover.svg" width="1600" height="1000" loading="lazy" decoding="async" alt="Automotive Pedal Mechanism placeholder">
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-code">PROJECT 05</span>
+                <span class="status-badge status-badge--planned">Planned</span>
+              </div>
+              <h3>Automotive Pedal Mechanism</h3>
+              <p>Planned automotive pedal mechanism assembly with motion analysis, force ratios, and joint/pivot load evaluations.</p>
+              <div class="project-card-foot">
+                <span class="level-label">Intermediate &ndash; Advanced</span>
+                <a href="projects/automotive-pedal-mechanism.html" class="card-link-label">View brief <span class="arrow" aria-hidden="true">&rarr;</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="cad-card project-card reveal reveal-delay-1" data-project-card data-status="planned">
+            <div class="project-card-media">
+              <img src="assets/projects/planetary-gearbox/cover.svg" width="1600" height="1000" loading="lazy" decoding="async" alt="Advanced Planetary Gearbox placeholder">
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-code">PROJECT 06</span>
+                <span class="status-badge status-badge--planned">Planned</span>
+              </div>
+              <h3>Advanced Planetary Gearbox</h3>
+              <p>Planned planetary gearbox design covering reduction-ratio and torque calculations, bearing selection, and mechanical component analysis.</p>
+              <div class="project-card-foot">
+                <span class="level-label">Very Advanced</span>
+                <a href="projects/planetary-gearbox.html" class="card-link-label">View brief <span class="arrow" aria-hidden="true">&rarr;</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="cad-card project-card reveal reveal-delay-2" data-project-card data-status="planned">
+            <div class="project-card-media">
+              <img src="assets/projects/centrifugal-pump-study/cover.svg" width="1600" height="1000" loading="lazy" decoding="async" alt="Centrifugal Pump Engineering Study placeholder">
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <span class="project-code">PROJECT 07</span>
+                <span class="status-badge status-badge--planned">Planned</span>
+              </div>
+              <h3>Centrifugal Pump Engineering Study</h3>
+              <p>Planned engineering study modeling centrifugal pump components, full assembly, and analysis of operating principles.</p>
+              <div class="project-card-foot">
+                <span class="level-label">Very Advanced</span>
+                <a href="projects/centrifugal-pump-study.html" class="card-link-label">View brief <span class="arrow" aria-hidden="true">&rarr;</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Roadmap Progression Visualization -->
+        <div class="roadmap-panel reveal">
+          <div class="roadmap-head">
+            <h3>Portfolio roadmap &mdash; 1 of 7 complete</h3>
+            <div class="roadmap-legend">
+              <span class="legend-item"><span class="legend-dot" style="background: var(--ok);"></span>Completed</span>
+              <span class="legend-item"><span class="legend-dot" style="background: var(--cyan);"></span>Next</span>
+              <span class="legend-item"><span class="legend-dot" style="background: var(--warn);"></span>Planned</span>
+            </div>
           </div>
-          <div class="skill">
-            <strong>AutoCAD</strong>
-            <p>2D drafting and technical documentation.</p>
-          </div>
-          <div class="skill">
-            <strong>Manufacturing Design</strong>
-            <p>Machining considerations and mechanical detailing.</p>
+
+          <div class="roadmap-svg-scroll">
+            <svg class="roadmap-svg" viewBox="0 0 1000 220" width="1000" height="220" role="img" aria-label="Portfolio progression step line from Project 01 (Completed) through Project 07 (Very Advanced)">
+              <!-- Baseline Grid -->
+              <line x1="60" y1="185" x2="940" y2="185" stroke="rgba(148,180,220,0.22)" stroke-width="1"/>
+              <line x1="60" y1="140" x2="940" y2="140" stroke="rgba(148,180,220,0.08)" stroke-width="1" stroke-dasharray="4 4"/>
+              <line x1="60" y1="95" x2="940" y2="95" stroke="rgba(148,180,220,0.08)" stroke-width="1" stroke-dasharray="4 4"/>
+              <line x1="60" y1="50" x2="940" y2="50" stroke="rgba(148,180,220,0.08)" stroke-width="1" stroke-dasharray="4 4"/>
+
+              <!-- Step Progression Line -->
+              <polyline points="100,158 230,158 360,128 490,96 620,96 750,56 880,56" fill="none" stroke="rgba(148,180,220,0.35)" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="100" y1="158" x2="230" y2="158" stroke="#00E5FF" stroke-width="2.5"/>
+
+              <!-- Node 01 (Completed) -->
+              <circle cx="100" cy="158" r="9" fill="#070B14" stroke="#34D399" stroke-width="3"/>
+              <circle cx="100" cy="158" r="3.5" fill="#34D399"/>
+              <text x="100" y="138" text-anchor="middle" fill="#34D399" font-family="JetBrains Mono, monospace" font-size="11">01 DONE</text>
+              <text x="100" y="205" text-anchor="middle" fill="#E6EDF7" font-family="Inter, sans-serif" font-size="11">Sensor Bracket</text>
+
+              <!-- Node 02 (Next) -->
+              <circle cx="230" cy="158" r="11" fill="rgba(0,229,255,0.16)" stroke="#00E5FF" stroke-width="2.5"/>
+              <circle cx="230" cy="158" r="4" fill="#00E5FF"/>
+              <text x="230" y="136" text-anchor="middle" fill="#00E5FF" font-family="JetBrains Mono, monospace" font-size="11">02 NEXT</text>
+              <text x="230" y="205" text-anchor="middle" fill="#E6EDF7" font-family="Inter, sans-serif" font-size="11">Precision Clamp</text>
+
+              <!-- Node 03 -->
+              <circle cx="360" cy="128" r="8" fill="#070B14" stroke="#F5B544" stroke-width="2.5"/>
+              <text x="360" y="108" text-anchor="middle" fill="#F5B544" font-family="JetBrains Mono, monospace" font-size="11">03</text>
+              <text x="360" y="205" text-anchor="middle" fill="#8A99B0" font-family="Inter, sans-serif" font-size="11">Sheet Metal</text>
+
+              <!-- Node 04 -->
+              <circle cx="490" cy="96" r="8" fill="#070B14" stroke="#F5B544" stroke-width="2.5"/>
+              <text x="490" y="76" text-anchor="middle" fill="#F5B544" font-family="JetBrains Mono, monospace" font-size="11">04</text>
+              <text x="490" y="205" text-anchor="middle" fill="#8A99B0" font-family="Inter, sans-serif" font-size="11">CNC Fixture</text>
+
+              <!-- Node 05 -->
+              <circle cx="620" cy="96" r="8" fill="#070B14" stroke="#F5B544" stroke-width="2.5"/>
+              <text x="620" y="76" text-anchor="middle" fill="#F5B544" font-family="JetBrains Mono, monospace" font-size="11">05</text>
+              <text x="620" y="205" text-anchor="middle" fill="#8A99B0" font-family="Inter, sans-serif" font-size="11">Pedal Mech</text>
+
+              <!-- Node 06 -->
+              <circle cx="750" cy="56" r="8" fill="#070B14" stroke="#F5B544" stroke-width="2.5"/>
+              <text x="750" y="36" text-anchor="middle" fill="#F5B544" font-family="JetBrains Mono, monospace" font-size="11">06</text>
+              <text x="750" y="205" text-anchor="middle" fill="#8A99B0" font-family="Inter, sans-serif" font-size="11">Planetary Gear</text>
+
+              <!-- Node 07 -->
+              <circle cx="880" cy="56" r="8" fill="#070B14" stroke="#F5B544" stroke-width="2.5"/>
+              <text x="880" y="36" text-anchor="middle" fill="#F5B544" font-family="JetBrains Mono, monospace" font-size="11">07</text>
+              <text x="880" y="205" text-anchor="middle" fill="#8A99B0" font-family="Inter, sans-serif" font-size="11">Centrifugal Pump</text>
+            </svg>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about">
+    <!-- § 04 — Engineering Process -->
+    <section id="process" class="section">
       <div class="container">
-        <h2>About Me</h2>
-        <p class="about">
-          I am Kareem Zaghloul, a Computer-Aided Manufacturing
-          student at Al-Balqa Applied University in Jordan.
-          I am building a technical portfolio focused on
-          mechanical CAD design, practical engineering projects,
-          and manufacturing documentation.
-        </p>
+        <div class="section-head reveal">
+          <div class="section-head-copy">
+            <div class="section-label">&sect; 04 &mdash; Engineering Process</div>
+            <h2 class="section-title">The workflow I apply to each project.</h2>
+          </div>
+        </div>
+
+        <ol class="process-track">
+          <li class="process-step reveal">
+            <div class="process-step-num"><span>STEP 01</span></div>
+            <h3>Define requirements &amp; constraints</h3>
+            <p>Clarify functional goals, mounting interfaces, adjustment travel, and hardware standards before modeling.</p>
+          </li>
+          <li class="process-step reveal reveal-delay-1">
+            <div class="process-step-num"><span>STEP 02</span></div>
+            <h3>Concept &amp; sketching</h3>
+            <p>Evaluate geometry layouts and component orientation to balance simplicity, stiffness, and access.</p>
+          </li>
+          <li class="process-step reveal reveal-delay-2">
+            <div class="process-step-num"><span>STEP 03</span></div>
+            <h3>Parametric part modeling</h3>
+            <p>Build clean, editable SOLIDWORKS feature trees with clear design intent and reference planes.</p>
+          </li>
+          <li class="process-step reveal">
+            <div class="process-step-num"><span>STEP 04</span></div>
+            <h3>Assembly &amp; digital verification</h3>
+            <p>Constrain components with realistic mates, verify range of motion, and run interference detection.</p>
+          </li>
+          <li class="process-step reveal reveal-delay-1">
+            <div class="process-step-num"><span>STEP 05</span></div>
+            <h3>Technical drawings &amp; documentation</h3>
+            <p>Produce orthographic part sheets, exploded views, and structured case-study documentation.</p>
+          </li>
+          <li class="process-step reveal reveal-delay-2">
+            <div class="process-step-num"><span>STEP 06</span></div>
+            <h3>Manufacturability review</h3>
+            <p>Check machining access, tool clearance, and assembly sequence before finalizing the design package.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section id="contact">
+    <!-- § 05 — Documents -->
+    <section id="documents" class="section">
       <div class="container">
-        <h2>Let's Connect</h2>
-        <p class="section-intro">
-          Interested in my CAD work or a potential collaboration?
-          Connect with me on LinkedIn.
-        </p>
-        <a class="btn primary"
-           href="https://www.linkedin.com/in/kareem-zaghloul-7426b5449/"
-           target="_blank"
-           rel="noopener noreferrer">
-          View LinkedIn Profile
-        </a>
+        <div class="section-head reveal">
+          <div class="section-head-copy">
+            <div class="section-label">&sect; 05 &mdash; Documents</div>
+            <h2 class="section-title">Downloadable CV &amp; portfolio packet.</h2>
+          </div>
+        </div>
+
+        <div class="docs-grid">
+          <article class="cad-card doc-card reveal">
+            <div class="doc-card-head">
+              <span class="mono" style="font-size: 0.75rem; color: var(--muted);">DOCUMENT 01</span>
+              <span class="file-badge">PDF</span>
+            </div>
+            <h3>Curriculum Vitae (CV)</h3>
+            <p>Summary of education at Al-Balqa Applied University, CAD/CAM coursework focus, and engineering tools.</p>
+            <a href="assets/docs/Kareem-Zaghloul-CV.pdf" class="btn btn-ghost btn-sm" download>
+              <span>Download CV (PDF)</span>
+              <span class="arrow" aria-hidden="true">&darr;</span>
+            </a>
+          </article>
+
+          <article class="cad-card doc-card reveal reveal-delay-1">
+            <div class="doc-card-head">
+              <span class="mono" style="font-size: 0.75rem; color: var(--muted);">DOCUMENT 02</span>
+              <span class="file-badge">PDF</span>
+            </div>
+            <h3>Engineering Portfolio Packet</h3>
+            <p>Offline-friendly PDF compilation of selected CAD assemblies, orthographic views, and technical drawings.</p>
+            <a href="assets/docs/Kareem-Zaghloul-Portfolio.pdf" class="btn btn-ghost btn-sm" download>
+              <span>Download Portfolio (PDF)</span>
+              <span class="arrow" aria-hidden="true">&darr;</span>
+            </a>
+          </article>
+        </div>
+
+        <p class="docs-note">Updated versions available on request via LinkedIn.</p>
+      </div>
+    </section>
+
+    <!-- § 06 — Contact -->
+    <section id="contact" class="section blueprint-bg">
+      <div class="container">
+        <div class="section-label reveal">&sect; 06 &mdash; Contact</div>
+        <h2 class="contact-headline reveal">Let's talk about CAD &amp; manufacturing design.</h2>
+
+        <div class="contact-grid">
+          <article class="cad-card contact-card reveal">
+            <div class="doc-card-head">
+              <span class="mono" style="font-size: 0.75rem; color: var(--cyan);">CHANNEL 01</span>
+              <span class="file-badge">PRIMARY</span>
+            </div>
+            <h3>LinkedIn</h3>
+            <p>Connect regarding CAD design opportunities, internships, or engineering project collaboration.</p>
+            <a href="https://www.linkedin.com/in/kareem-zaghloul-7426b5449/" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+              <span>View LinkedIn Profile</span>
+              <span class="arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </article>
+
+          <article class="cad-card contact-card reveal reveal-delay-1">
+            <div class="doc-card-head">
+              <span class="mono" style="font-size: 0.75rem; color: var(--cyan);">CHANNEL 02</span>
+              <span class="file-badge">CODE &amp; HOSTING</span>
+            </div>
+            <h3>GitHub</h3>
+            <p>View portfolio source files and published documentation repositories.</p>
+            <a href="https://github.com/kareemzaghloul" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
+              <span>Open GitHub Profile</span>
+              <span class="arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </article>
+
+          <!-- EMAIL CARD TEMPLATE (Uncomment and replace YOUR_EMAIL@domain.com when ready)
+          <article class="cad-card contact-card reveal">
+            <div class="doc-card-head">
+              <span class="mono" style="font-size: 0.75rem; color: var(--cyan);">CHANNEL 03</span>
+              <span class="file-badge">DIRECT</span>
+            </div>
+            <h3>Email</h3>
+            <p>Send engineering inquiries or project documentation requests directly.</p>
+            <a href="mailto:YOUR_EMAIL@domain.com" class="btn btn-ghost btn-sm">
+              <span>YOUR_EMAIL@domain.com</span>
+              <span class="arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </article>
+          -->
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="container">
-      Kareem Zaghloul | Mechanical CAD Portfolio
+      <div class="footer-grid">
+        <div>
+          <div class="footer-cell-label">ENGINEER</div>
+          <div class="footer-cell-val">Kareem Zaghloul</div>
+        </div>
+        <div>
+          <div class="footer-cell-label">DISCIPLINE</div>
+          <div class="footer-cell-val">Mechanical CAD &amp; CAM Student</div>
+        </div>
+        <div>
+          <div class="footer-cell-label">LINKS</div>
+          <div class="footer-links">
+            <a href="https://www.linkedin.com/in/kareem-zaghloul-7426b5449/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/kareemzaghloul" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="#projects">Projects</a>
+          </div>
+        </div>
+        <div>
+          <a href="#top" class="btn btn-ghost btn-sm">Back to top &uarr;</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span id="footer-year">2026</span> Kareem Zaghloul &middot; Mechanical CAD Portfolio</span>
+        <span>Al-Balqa Applied University &middot; Jordan</span>
+      </div>
     </div>
   </footer>
+
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

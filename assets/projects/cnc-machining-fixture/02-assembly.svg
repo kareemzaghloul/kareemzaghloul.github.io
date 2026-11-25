@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="FIG. 02 — Assembly View — CNC Machining Fixture — CAD Assembly">
+  <defs>
+    <pattern id="minorGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(148,180,220,0.08)" stroke-width="1"/>
+    </pattern>
+    <pattern id="majorGrid" width="120" height="120" patternUnits="userSpaceOnUse">
+      <rect width="120" height="120" fill="url(#minorGrid)"/>
+      <path d="M 120 0 L 0 0 0 120" fill="none" stroke="rgba(148,180,220,0.16)" stroke-width="1.2"/>
+    </pattern>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0D1729" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#050810" stop-opacity="0.72"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#070B14"/>
+  <rect width="1600" height="1000" fill="url(#majorGrid)"/>
+  <rect width="1600" height="1000" fill="url(#vignette)"/>
+
+  <!-- Technical Sheet Border -->
+  <rect x="48" y="48" width="1504" height="904" fill="none" stroke="rgba(148,180,220,0.28)" stroke-width="1.5"/>
+
+  <!-- Corner Crop Marks -->
+  <g stroke="#F5B544" stroke-width="2.5" fill="none">
+    <path d="M 48 76 L 48 48 L 76 48"/>
+    <path d="M 1524 48 L 1552 48 L 1552 76"/>
+    <path d="M 48 924 L 48 952 L 76 952"/>
+    <path d="M 1524 952 L 1552 952 L 1552 924"/>
+  </g>
+
+  <g opacity="0.20" stroke="#F5B544" fill="none" stroke-width="1.3">
+    <circle cx="800" cy="500" r="210" stroke-dasharray="6 6"/>
+    <circle cx="800" cy="500" r="140"/>
+    <line x1="520" y1="500" x2="1080" y2="500" stroke-dasharray="16 6 3 6"/>
+    <line x1="800" y1="260" x2="800" y2="740" stroke-dasharray="16 6 3 6"/>
+    <polygon points="800,405 882,452 882,548 800,595 718,548 718,452"/>
+  </g>
+
+  <!-- Top Left Sheet Metadata -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" letter-spacing="2">
+    <rect x="72" y="72" width="14" height="14" fill="#F5B544" opacity="0.9"/>
+    <text x="98" y="84" fill="#F5B544">PRJ-04 // PLACEHOLDER</text>
+    <text x="72" y="114" fill="#8A99B0" font-size="13">UNITS: MM  |  PROJECTION: ISO / ORTHO  |  STATUS: PLANNED</text>
+  </g>
+
+  <!-- Center Focal Badge -->
+  <g text-anchor="middle">
+    <rect x="410" y="414" width="780" height="172" rx="4" fill="#0A1120" fill-opacity="0.9" stroke="rgba(148,180,220,0.28)" stroke-width="1.2"/>
+    <text x="800" y="466" fill="#F5B544" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" letter-spacing="3">FIG. 02 — Assembly View</text>
+    <text x="800" y="510" fill="#E6EDF7" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="600">CNC Machining Fixture — CAD Assembly</text>
+    <text x="800" y="552" fill="#8A99B0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">Replace with: 02-assembly.jpg (2400x1500, JPG/WebP, &lt; 400 KB)</text>
+  </g>
+
+  <!-- Corner Title Block -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <rect x="1092" y="840" width="460" height="112" fill="#0A1120" fill-opacity="0.94" stroke="rgba(148,180,220,0.34)" stroke-width="1.2"/>
+    <line x1="1092" y1="878" x2="1552" y2="878" stroke="rgba(148,180,220,0.22)" stroke-width="1"/>
+    <line x1="1092" y1="914" x2="1552" y2="914" stroke="rgba(148,180,220,0.22)" stroke-width="1"/>
+    <line x1="1362" y1="878" x2="1362" y2="952" stroke="rgba(148,180,220,0.22)" stroke-width="1"/>
+
+    <text x="1106" y="864" fill="#E6EDF7" font-size="13" font-weight="600">KAREEM ZAGHLOUL — CAD PORTFOLIO</text>
+    <text x="1106" y="900" fill="#8A99B0" font-size="12">DOC: PRJ-04</text>
+    <text x="1376" y="900" fill="#F5B544" font-size="12">DIM: 1600x1000</text>
+    <text x="1106" y="937" fill="#8A99B0" font-size="12">CAD / CAM DOCUMENTATION</text>
+    <text x="1376" y="937" fill="#E6EDF7" font-size="12">REV A</text>
+  </g>
+</svg>
