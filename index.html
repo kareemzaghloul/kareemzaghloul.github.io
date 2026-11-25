@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kareem Zaghloul's mechanical CAD and engineering design portfolio.">
+  <title>Kareem Zaghloul | Mechanical CAD Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #0b1120;
+      --panel: #151f32;
+      --text: #f1f5f9;
+      --muted: #a1aec3;
+      --accent: #57c7db;
+      --line: #2a3850;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: #0b1120ee;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      padding: 23px 0;
+    }
+
+    .logo {
+      font-size: 19px;
+      font-weight: 750;
+      letter-spacing: -.5px;
+    }
+
+    .logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .hero {
+      padding: 105px 0 90px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.12;
+      letter-spacing: -2px;
+      margin: 17px 0;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 670px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 7px;
+      border: 1px solid var(--line);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #08121d;
+      border-color: var(--accent);
+    }
+
+    .btn:hover { opacity: .85; }
+
+    section { padding: 80px 0; }
+
+    h2 {
+      font-size: 31px;
+      letter-spacing: -.8px;
+      margin: 0 0 15px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 32px;
+    }
+
+    .project {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 34px;
+    }
+
+    .project-number {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .project h3 {
+      font-size: 27px;
+      margin: 12px 0;
+    }
+
+    .project p { color: var(--muted); }
+
+    .details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin: 28px 0;
+    }
+
+    .detail {
+      background: #0e1728;
+      padding: 17px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+    }
+
+    .detail strong {
+      display: block;
+      font-size: 22px;
+      color: var(--accent);
+    }
+
+    .detail span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .tags {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .tag {
+      border: 1px solid #34435b;
+      color: #c9d8e7;
+      padding: 5px 12px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .skill {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      padding: 23px;
+    }
+
+    .skill strong { display: block; }
+
+    .skill p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 0;
+    }
+
+    .about {
+      max-width: 750px;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 650px) {
+      .hero { padding: 75px 0; }
+      section { padding: 55px 0; }
+      .details, .skill-grid { grid-template-columns: 1fr; }
+      .project { padding: 23px; }
+      .nav-links { gap: 15px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="logo" href="#">KAREEM<span>.</span>ZAGHLOUL</a>
+        <div class="nav-links">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="container">
+        <div class="eyebrow">Mechanical CAD & Engineering Design</div>
+        <h1>Kareem Zaghloul</h1>
+        <p>
+          Mechanical CAD Designer and Computer-Aided Manufacturing
+          student, focused on 3D modeling, mechanical assemblies,
+          technical drawings, and manufacturing-oriented design.
+        </p>
+
+        <div class="buttons">
+          <a class="btn primary" href="#projects">Explore My Projects</a>
+          <a class="btn" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+
+    <section id="projects">
+      <div class="container">
+        <h2>Selected Projects</h2>
+        <p class="section-intro">
+          A collection of mechanical CAD projects documenting
+          design decisions, assemblies, technical drawings,
+          and practical manufacturing considerations.
+        </p>
+
+        <article class="project">
+          <div class="project-number">PROJECT 01 / MECHANICAL DESIGN</div>
+          <h3>Adjustable Proximity Sensor Mounting Bracket</h3>
+
+          <p>
+            An adjustable mounting system designed in SOLIDWORKS
+            for an industrial M12 proximity sensor. The assembly
+            includes a machined aluminum base plate, an L-shaped
+            sensor bracket, and standard fastening hardware.
+          </p>
+
+          <div class="details">
+            <div class="detail">
+              <strong>25 mm</strong>
+              <span>Linear adjustment range</span>
+            </div>
+            <div class="detail">
+              <strong>M12</strong>
+              <span>Industrial proximity sensor</span>
+            </div>
+            <div class="detail">
+              <strong>2</strong>
+              <span>Technical part drawings</span>
+            </div>
+          </div>
+
+          <p>
+            The project includes a complete 3D assembly,
+            exploded view, manufacturing-style drawings,
+            and digital interference checks.
+            The sensor uses manufacturer reference CAD.
+            Physical manufacturing and testing have not
+            been performed.
+          </p>
+
+          <div class="tags">
+            <span class="tag">SOLIDWORKS</span>
+            <span class="tag">3D Modeling</span>
+            <span class="tag">Assembly Design</span>
+            <span class="tag">Technical Drawings</span>
+            <span class="tag">Design for Manufacturing</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2>Technical Focus</h2>
+        <p class="section-intro">
+          Tools and technical areas represented in my CAD work.
+        </p>
+
+        <div class="skill-grid">
+          <div class="skill">
+            <strong>SOLIDWORKS</strong>
+            <p>Part modeling, assemblies, and engineering drawings.</p>
+          </div>
+          <div class="skill">
+            <strong>AutoCAD</strong>
+            <p>2D drafting and technical documentation.</p>
+          </div>
+          <div class="skill">
+            <strong>Manufacturing Design</strong>
+            <p>Machining considerations and mechanical detailing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p class="about">
+          I am Kareem Zaghloul, a Computer-Aided Manufacturing
+          student at Al-Balqa Applied University in Jordan.
+          I am building a technical portfolio focused on
+          mechanical CAD design, practical engineering projects,
+          and manufacturing documentation.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Let's Connect</h2>
+        <p class="section-intro">
+          Interested in my CAD work or a potential collaboration?
+          Connect with me on LinkedIn.
+        </p>
+        <a class="btn primary"
+           href="https://www.linkedin.com/in/kareem-zaghloul-7426b5449/"
+           target="_blank"
+           rel="noopener noreferrer">
+          View LinkedIn Profile
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      Kareem Zaghloul | Mechanical CAD Portfolio
+    </div>
+  </footer>
+</body>
+</html>
